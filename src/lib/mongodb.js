@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://lynx_117:vlada117@cluster0.zrn0p3v.mongodb.net/bakeryDB?retryWrites=true&w=majority&appName=Cluster0";
 
 if (!MONGODB_URI) {
   console.warn('MONGODB_URI environment variable is missing.');
