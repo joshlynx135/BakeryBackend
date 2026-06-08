@@ -1,6 +1,7 @@
 import dbConnect from '@/lib/mongodb';
 import Account from '@/models/Account';
 import Link from 'next/link';
+import CreateAccountForm from './CreateAccountForm';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,6 +12,7 @@ export default async function Accounts() {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-6">Connected Bakery Accounts</h2>
+      <CreateAccountForm />
       <div className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden shadow-lg">
         <table className="w-full text-left">
           <thead className="bg-gray-800 text-gray-400 text-sm">
