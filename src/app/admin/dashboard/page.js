@@ -3,6 +3,8 @@ import Account from '@/models/Account';
 import SyncLog from '@/models/SyncLog';
 import { Activity, Users, Database } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Dashboard() {
   await dbConnect();
   

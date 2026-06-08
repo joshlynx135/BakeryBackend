@@ -2,6 +2,8 @@ import dbConnect from '@/lib/mongodb';
 import Account from '@/models/Account';
 import { TrendingUp, TrendingDown, PieChart } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Analytics() {
   await dbConnect();
   const accounts = await Account.find();

@@ -2,6 +2,8 @@ import dbConnect from '@/lib/mongodb';
 import Account from '@/models/Account';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AccountDetail({ params }) {
   await dbConnect();
   const account = await Account.findById(params.id);

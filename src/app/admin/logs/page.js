@@ -1,6 +1,8 @@
 import dbConnect from '@/lib/mongodb';
 import SyncLog from '@/models/SyncLog';
 
+export const dynamic = 'force-dynamic';
+
 export default async function SyncLogs() {
   await dbConnect();
   const logs = await SyncLog.find().sort({ createdAt: -1 }).limit(100).populate('accountId');

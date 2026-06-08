@@ -1,6 +1,8 @@
 import dbConnect from '@/lib/mongodb';
 import Ticket from '@/models/Ticket';
 
+export const dynamic = 'force-dynamic';
+
 export default async function SupportTickets() {
   await dbConnect();
   const tickets = await Ticket.find().sort({ createdAt: -1 }).populate('accountId');
