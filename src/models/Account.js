@@ -9,7 +9,9 @@ const AccountSchema = new mongoose.Schema({
     production: { type: Array, default: [] },
     distributors: { type: Array, default: [] },
     products: { type: Array, default: [] },
-  }
+  },
+  lastSyncAt: { type: Date },
+  isSuspended: { type: Boolean, default: false }
 }, { timestamps: true });
 
 export default mongoose.models.Account || mongoose.model('Account', AccountSchema);
