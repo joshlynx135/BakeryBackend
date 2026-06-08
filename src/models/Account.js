@@ -10,6 +10,11 @@ const AccountSchema = new mongoose.Schema({
     distributors: { type: Array, default: [] },
     products: { type: Array, default: [] },
   },
+  businessInfo: {
+    name: { type: String, default: "Bakery System" },
+    tagline: { type: String, default: "Management Dashboard" },
+    address: { type: String, default: "" }
+  },
   lastSyncAt: { type: Date },
   isSuspended: { type: Boolean, default: false }
 }, { timestamps: true });

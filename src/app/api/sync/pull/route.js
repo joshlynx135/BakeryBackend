@@ -20,7 +20,7 @@ export async function POST(request) {
       recordsSynced: 0
     });
 
-    return NextResponse.json({ success: true, data: account.syncData });
+    return NextResponse.json({ success: true, data: account.syncData, businessInfo: account.businessInfo });
   } catch (error) {
     if (token) {
        await SyncLog.create({ accountId: token, action: 'PULL', status: 'ERROR', errorMessage: error.message }).catch(()=>{});
